@@ -1,24 +1,292 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BT3-Tz-DIR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--iCommunicate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xn-fI-D8W">
+                                <rect key="frame" x="113" y="721" width="197" height="30"/>
+                                <state key="normal" title="Speech to Text"/>
+                                <connections>
+                                    <segue destination="EGV-98-rfH" kind="show" id="NPY-KD-VWM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wR-Kf-Pqe">
+                                <rect key="frame" x="113" y="759" width="197" height="30"/>
+                                <state key="normal" title="Text to Speech"/>
+                                <connections>
+                                    <segue destination="8qY-Cc-LTP" kind="show" id="oss-dz-tSZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHU-nI-ddZ">
+                                <rect key="frame" x="85" y="797" width="261" height="30"/>
+                                <state key="normal" title="Language Detection"/>
+                                <connections>
+                                    <segue destination="Zaa-vV-nwo" kind="show" id="AQk-Fn-dVe"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDO-6V-UmZ">
+                                <rect key="frame" x="54" y="168" width="306" height="392"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="392" id="arS-iD-MIF"/>
+                                </constraints>
+                                <string key="text">Welcome to iCommunicate! In this app you will find tools that will assist you with breaking communication barriers. For better results, make sure you press the stop button (Text to Speech) or the microphone button (Speech to Text) after you change the current language. </string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2wR-Kf-Pqe" firstAttribute="leading" secondItem="8Xn-fI-D8W" secondAttribute="leading" id="Bow-rK-12E"/>
+                            <constraint firstItem="2wR-Kf-Pqe" firstAttribute="top" secondItem="8Xn-fI-D8W" secondAttribute="bottom" constant="8" id="Fgb-j8-0Jw"/>
+                            <constraint firstItem="bHU-nI-ddZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="Jaq-iL-ytv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bHU-nI-ddZ" secondAttribute="trailing" constant="68" id="Jpj-zQ-44d"/>
+                            <constraint firstItem="2wR-Kf-Pqe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="RaY-ab-oTg"/>
+                            <constraint firstAttribute="bottom" secondItem="2wR-Kf-Pqe" secondAttribute="bottom" constant="107" id="Vxf-Ed-Rb3"/>
+                            <constraint firstItem="bHU-nI-ddZ" firstAttribute="top" secondItem="2wR-Kf-Pqe" secondAttribute="bottom" constant="8" id="e2n-jI-I8t"/>
+                            <constraint firstItem="zDO-6V-UmZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j54-BZ-7hc"/>
+                            <constraint firstItem="zDO-6V-UmZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="kTd-oD-MfJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2wR-Kf-Pqe" secondAttribute="trailing" constant="104" id="lpQ-T8-8dw"/>
+                            <constraint firstItem="zDO-6V-UmZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="rVx-F2-Tby"/>
+                            <constraint firstItem="2wR-Kf-Pqe" firstAttribute="trailing" secondItem="8Xn-fI-D8W" secondAttribute="trailing" id="weo-RM-Ynw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="iCommunicate" id="5Lz-HL-L5I"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="117.85714285714285"/>
+        </scene>
+        <!--Text To Speech-->
+        <scene sceneID="zOG-WQ-65z">
+            <objects>
+                <viewController id="8qY-Cc-LTP" customClass="TextToSpeechViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m8b-BN-EP5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HLj-BV-dyv">
+                                <rect key="frame" x="20" y="173" width="374" height="505"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="505" id="gMy-u5-hgL"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCX-Fs-lZW">
+                                <rect key="frame" x="177" y="126" width="28" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="play.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="play:" destination="8qY-Cc-LTP" eventType="touchUpInside" id="M8z-zp-XW5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a11-i3-BKu">
+                                <rect key="frame" x="138" y="126" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pause.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="pause:" destination="8qY-Cc-LTP" eventType="touchUpInside" id="u30-ae-WoS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRo-Np-tSA">
+                                <rect key="frame" x="213" y="125" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="stop.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="stop:" destination="8qY-Cc-LTP" eventType="touchUpInside" id="r6e-7V-BFI"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olC-Jg-QhJ">
+                                <rect key="frame" x="0.0" y="700" width="414" height="162"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsH-36-I3G">
+                                <rect key="frame" x="250" y="126" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="trash.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="clear:" destination="8qY-Cc-LTP" eventType="touchUpInside" id="S4G-jp-Kwb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="olC-Jg-QhJ" firstAttribute="bottom" secondItem="jWP-zm-Mpe" secondAttribute="bottom" id="3ii-sQ-UvO"/>
+                            <constraint firstItem="olC-Jg-QhJ" firstAttribute="centerX" secondItem="HLj-BV-dyv" secondAttribute="centerX" id="L4c-3M-oms"/>
+                            <constraint firstItem="olC-Jg-QhJ" firstAttribute="top" secondItem="HLj-BV-dyv" secondAttribute="bottom" constant="22" id="YMA-3L-c7B"/>
+                            <constraint firstItem="olC-Jg-QhJ" firstAttribute="leading" secondItem="jWP-zm-Mpe" secondAttribute="leading" id="jDR-dK-DQF"/>
+                            <constraint firstItem="HLj-BV-dyv" firstAttribute="top" secondItem="m8b-BN-EP5" secondAttribute="top" constant="173" id="lyz-ia-Gct"/>
+                            <constraint firstItem="HLj-BV-dyv" firstAttribute="trailing" secondItem="m8b-BN-EP5" secondAttribute="trailingMargin" id="mz6-HV-RaM"/>
+                            <constraint firstItem="HLj-BV-dyv" firstAttribute="leading" secondItem="m8b-BN-EP5" secondAttribute="leadingMargin" id="p45-fW-zbE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jWP-zm-Mpe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Text To Speech" id="6Mz-5f-TVs"/>
+                    <connections>
+                        <outlet property="inputTextView" destination="HLj-BV-dyv" id="zv2-aS-OXH"/>
+                        <outlet property="languagePicker" destination="olC-Jg-QhJ" id="THJ-3I-njK"/>
+                        <outlet property="playPause" destination="sCX-Fs-lZW" id="zXC-iA-ZUo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kt-v3-het" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818.840579710145" y="117.85714285714285"/>
+        </scene>
+        <!--Language Detection-->
+        <scene sceneID="Df4-FG-eai">
+            <objects>
+                <viewController id="Zaa-vV-nwo" customClass="LanguageDetectionViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XaR-Qb-xeh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KzF-4K-aiM">
+                                <rect key="frame" x="20" y="168" width="374" height="558"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiI-Rk-HLH">
+                                <rect key="frame" x="20" y="789" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdP-vu-our">
+                                <rect key="frame" x="111" y="97" width="185" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="3Q1-xm-Yti"/>
+                                </constraints>
+                                <state key="normal" title="Detect"/>
+                                <connections>
+                                    <action selector="detect:" destination="Zaa-vV-nwo" eventType="touchUpInside" id="apr-7E-DAK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FdP-vu-our" firstAttribute="top" secondItem="gUq-W8-TWR" secondAttribute="top" constant="9" id="47e-JO-6XR"/>
+                            <constraint firstItem="gUq-W8-TWR" firstAttribute="trailing" secondItem="FdP-vu-our" secondAttribute="trailing" constant="118" id="7SR-Ni-wkQ"/>
+                            <constraint firstItem="YiI-Rk-HLH" firstAttribute="trailing" secondItem="KzF-4K-aiM" secondAttribute="trailing" id="G0U-eK-IDO"/>
+                            <constraint firstItem="YiI-Rk-HLH" firstAttribute="top" secondItem="KzF-4K-aiM" secondAttribute="bottom" constant="63" id="LbS-E9-kEW"/>
+                            <constraint firstItem="KzF-4K-aiM" firstAttribute="top" secondItem="FdP-vu-our" secondAttribute="bottom" constant="20" id="N1X-7o-jSr"/>
+                            <constraint firstItem="FdP-vu-our" firstAttribute="leading" secondItem="gUq-W8-TWR" secondAttribute="leading" constant="111" id="Xo8-ZY-YWZ"/>
+                            <constraint firstItem="gUq-W8-TWR" firstAttribute="bottom" secondItem="YiI-Rk-HLH" secondAttribute="bottom" constant="52" id="bgi-gK-Elj"/>
+                            <constraint firstItem="KzF-4K-aiM" firstAttribute="trailing" secondItem="XaR-Qb-xeh" secondAttribute="trailingMargin" id="dlz-3s-1m9"/>
+                            <constraint firstItem="YiI-Rk-HLH" firstAttribute="leading" secondItem="KzF-4K-aiM" secondAttribute="leading" id="jfi-SA-sH3"/>
+                            <constraint firstItem="KzF-4K-aiM" firstAttribute="leading" secondItem="XaR-Qb-xeh" secondAttribute="leadingMargin" id="q4z-KI-jmq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gUq-W8-TWR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Language Detection" id="FcV-RO-oot"/>
+                    <connections>
+                        <outlet property="detectionTextView" destination="KzF-4K-aiM" id="2Up-QB-QgS"/>
+                        <outlet property="languageLabel" destination="YiI-Rk-HLH" id="Y0p-A3-S7M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CrK-GC-1dV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863.7681159420292" y="849.77678571428567"/>
+        </scene>
+        <!--Speech To Text-->
+        <scene sceneID="X2B-dA-Ay4">
+            <objects>
+                <viewController id="EGV-98-rfH" customClass="SpeechToTextViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rna-cc-2qO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ysh-19-kqs">
+                                <rect key="frame" x="20" y="172" width="374" height="520"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="520" id="REA-2Q-XlF"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw9-6M-H8T">
+                                <rect key="frame" x="90" y="124" width="292" height="22"/>
+                                <state key="normal" title="Button" image="mic.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="transcribe:" destination="EGV-98-rfH" eventType="touchUpInside" id="DjJ-X6-Tcu"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ky9-pD-Vp6">
+                                <rect key="frame" x="0.0" y="700" width="414" height="162"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ysh-19-kqs" firstAttribute="trailing" secondItem="rna-cc-2qO" secondAttribute="trailingMargin" id="0Bi-bC-qC7"/>
+                            <constraint firstItem="Ysh-19-kqs" firstAttribute="leading" secondItem="rna-cc-2qO" secondAttribute="leadingMargin" id="0Ze-RE-Ivj"/>
+                            <constraint firstItem="Ky9-pD-Vp6" firstAttribute="top" secondItem="Ysh-19-kqs" secondAttribute="bottom" constant="8" id="4EG-xJ-4It"/>
+                            <constraint firstItem="gM0-1T-m5E" firstAttribute="trailing" secondItem="Bw9-6M-H8T" secondAttribute="trailing" constant="32" id="MJb-An-o61"/>
+                            <constraint firstItem="Bw9-6M-H8T" firstAttribute="top" secondItem="gM0-1T-m5E" secondAttribute="top" constant="36" id="P3T-ks-iis"/>
+                            <constraint firstItem="Ky9-pD-Vp6" firstAttribute="centerX" secondItem="Ysh-19-kqs" secondAttribute="centerX" id="PgQ-Yv-Ava"/>
+                            <constraint firstItem="Bw9-6M-H8T" firstAttribute="leading" secondItem="gM0-1T-m5E" secondAttribute="leading" constant="90" id="gxP-YM-Jdc"/>
+                            <constraint firstItem="Ky9-pD-Vp6" firstAttribute="bottom" secondItem="gM0-1T-m5E" secondAttribute="bottom" id="hZP-fy-veE"/>
+                            <constraint firstItem="Ysh-19-kqs" firstAttribute="top" secondItem="rna-cc-2qO" secondAttribute="top" constant="172" id="xPp-op-mYT"/>
+                            <constraint firstItem="Ky9-pD-Vp6" firstAttribute="leading" secondItem="gM0-1T-m5E" secondAttribute="leading" id="zXW-UH-m0F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gM0-1T-m5E"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Speech To Text" id="eVy-1z-ZI1"/>
+                    <connections>
+                        <outlet property="languagePicker" destination="Ky9-pD-Vp6" id="Spi-To-nKn"/>
+                        <outlet property="microphone" destination="Bw9-6M-H8T" id="3Hg-6J-hmn"/>
+                        <outlet property="speechTextView" destination="Ysh-19-kqs" id="kkY-V9-cHG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bwh-tx-Bqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818.840579710145" y="-635.49107142857144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fsf-N1-kDD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BT3-Tz-DIR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LEu-MH-v0U">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="b8e-h4-dC2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnG-xs-mhy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mic.fill" catalog="system" width="54" height="64"/>
+        <image name="pause.fill" catalog="system" width="58" height="64"/>
+        <image name="play.fill" catalog="system" width="58" height="64"/>
+        <image name="stop.fill" catalog="system" width="64" height="56"/>
+        <image name="trash.fill" catalog="system" width="60" height="64"/>
+    </resources>
 </document>

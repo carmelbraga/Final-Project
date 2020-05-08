@@ -15,6 +15,9 @@
 		1E42F35C246482B1000F448A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E42F35A246482B1000F448A /* LaunchScreen.storyboard */; };
 		1E42F367246482B2000F448A /* Final_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42F366246482B2000F448A /* Final_ProjectTests.swift */; };
 		1E42F372246482B2000F448A /* Final_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42F371246482B2000F448A /* Final_ProjectUITests.swift */; };
+		1E42F3802464982E000F448A /* SpeechToTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42F37F2464982E000F448A /* SpeechToTextViewController.swift */; };
+		1E42F3822464B5DA000F448A /* TextToSpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42F3812464B5DA000F448A /* TextToSpeechViewController.swift */; };
+		1E42F3862464C9F4000F448A /* LanguageDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42F3852464C9F4000F448A /* LanguageDetectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		1E42F36D246482B2000F448A /* Final ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Final ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E42F371246482B2000F448A /* Final_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_ProjectUITests.swift; sourceTree = "<group>"; };
 		1E42F373246482B2000F448A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E42F37F2464982E000F448A /* SpeechToTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToTextViewController.swift; sourceTree = "<group>"; };
+		1E42F3812464B5DA000F448A /* TextToSpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechViewController.swift; sourceTree = "<group>"; };
+		1E42F3852464C9F4000F448A /* LanguageDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				1E42F358246482B1000F448A /* Assets.xcassets */,
 				1E42F35A246482B1000F448A /* LaunchScreen.storyboard */,
 				1E42F35D246482B1000F448A /* Info.plist */,
+				1E42F37F2464982E000F448A /* SpeechToTextViewController.swift */,
+				1E42F3812464B5DA000F448A /* TextToSpeechViewController.swift */,
+				1E42F3852464C9F4000F448A /* LanguageDetectionViewController.swift */,
 			);
 			path = "Final Project";
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E42F3802464982E000F448A /* SpeechToTextViewController.swift in Sources */,
 				1E42F354246482B0000F448A /* ViewController.swift in Sources */,
+				1E42F3822464B5DA000F448A /* TextToSpeechViewController.swift in Sources */,
 				1E42F350246482B0000F448A /* AppDelegate.swift in Sources */,
+				1E42F3862464C9F4000F448A /* LanguageDetectionViewController.swift in Sources */,
 				1E42F352246482B0000F448A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
